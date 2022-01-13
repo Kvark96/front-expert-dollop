@@ -1,0 +1,26 @@
+ul.header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(49, 49, 49);
+  }
+  
+  ul.header li {
+    float: left;
+  }
+  
+  ul.header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  ul.header li a:hover:not(.active) {
+    background-color: rgb(146, 146, 146);
+  }
+  
+  .selected {
+    background-color: #2b661c;
+  }
