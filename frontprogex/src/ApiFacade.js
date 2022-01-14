@@ -28,15 +28,15 @@ function apiFacade() {
 
     const login = (user, password) => {
         const options = makeOptions("POST", true, { username: user, password: password });
-        return fetch(URL + "/api/login", options)
+        return fetch(URL + "login", options)
             .then(handleHttpErrors)
             .then(res => { setToken(res.token) })
     }
 
 
-    const fetchData = () => {
+    const fetchData = (path) => {
         const options = makeOptions("GET", true); //True add's the token
-        return fetch(URL + "/api/info/user", options)
+        return fetch(URL + path, options)
             .then(handleHttpErrors)
     }
 

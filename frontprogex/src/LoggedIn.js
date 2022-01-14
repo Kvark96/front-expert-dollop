@@ -5,7 +5,7 @@ export default function LoggedIn({ facade }) {
     const [errorMsg, setErrorMsg] = useState("All is good")
 
     useEffect(() => {
-        facade.fetchData()
+        facade.fetchData("conf/all")
             .then(data => setDataFromServer(data.msg))
             .catch(err => {
                 if (err.status) {
@@ -18,7 +18,7 @@ export default function LoggedIn({ facade }) {
     return (
         <div>
             <h2>Data Received from server</h2>
-            <h3>{dataFromServer}</h3>
+            <h3>{console.log(dataFromServer)}</h3>
             <p>{errorMsg}</p>
         </div>
     )
